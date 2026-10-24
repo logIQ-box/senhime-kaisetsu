@@ -1,0 +1,169 @@
+:root {
+  color: #33291f;
+  background: #ece9e2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: #ece9e2;
+}
+
+header,
+main {
+  width: min(100% - 32px, 900px);
+  margin-inline: auto;
+  text-align: center;
+}
+
+header {
+  padding: 48px 0 24px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 42px);
+}
+
+main {
+  padding-bottom: 48px;
+}
+
+.explanation-header {
+  padding: 32px 0 26px;
+}
+
+.explanation-logo {
+  width: min(100%, 600px);
+  margin: 0 auto 18px;
+}
+
+.explanation-title {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  color: #33291f;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(26px, 4vw, 36px);
+  letter-spacing: 0.12em;
+}
+
+.explanation-title::before,
+.explanation-title::after {
+  flex: 1;
+  height: 1px;
+  content: "";
+  background: #bd4610;
+}
+
+p {
+  margin: 0 0 32px;
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.9;
+}
+
+img {
+  display: block;
+  width: min(100%, 640px);
+  height: auto;
+  margin-inline: auto;
+}
+
+.waiting-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 42px;
+}
+
+.event-logo {
+  width: min(100%, 720px);
+  margin: 0 auto 34px;
+}
+
+.release-notice {
+  width: min(100%, 640px);
+  padding: 30px 32px 32px;
+  background: rgb(255 255 255 / 68%);
+  border-top: 3px solid #c84d12;
+  box-shadow: 0 8px 30px rgb(42 39 34 / 8%);
+}
+
+.release-notice h1 {
+  color: #2e2924;
+  font-size: clamp(25px, 4.5vw, 36px);
+  line-height: 1.5;
+}
+
+.release-notice h1 strong {
+  color: #bd4610;
+  font-size: 1.18em;
+}
+
+.release-message {
+  margin: 24px 0 0;
+  padding-top: 20px;
+  color: #3f3831;
+  font-size: clamp(17px, 2.5vw, 20px);
+  font-weight: 600;
+  line-height: 1.8;
+  border-top: 1px solid rgb(46 41 36 / 16%);
+}
+
+.mobile-break {
+  display: none;
+}
+
+#pdf-pages {
+  display: grid;
+  gap: 24px;
+  justify-items: center;
+}
+
+.pdf-page {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  background: #fffdf7;
+  box-shadow: 0 5px 24px rgb(42 39 34 / 16%);
+}
+
+@media (max-width: 600px) {
+  .waiting-main {
+    padding-top: 28px;
+  }
+
+  .event-logo {
+    margin-bottom: 24px;
+  }
+
+  .release-notice {
+    padding: 24px 20px 26px;
+  }
+
+  .mobile-break {
+    display: initial;
+  }
+
+  .explanation-header {
+    padding: 24px 0 18px;
+  }
+
+  .explanation-logo {
+    margin-bottom: 14px;
+  }
+
+  .explanation-title {
+    gap: 12px;
+  }
+
+  #pdf-pages {
+    gap: 12px;
+  }
+}
